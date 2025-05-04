@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+body {
+  font-family: 'DM Mono', monospace;
+}
+
+.no-font {
+  font-family: Arial, sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.inner{
+  background-color: black;
+  .page{
+      background-color: white;
+  }
+  .slide{
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: white;
+      z-index: 1;
+  }
+}
+
+@keyframes text-reveal-clip {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) skewY(2deg);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-fade-in-delay-1 {
+  animation: fadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) 1.2s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) 1.8s forwards;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-text-reveal-clip {
+  animation: text-reveal-clip 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
+}
+
+.font-mono {
+  font-family: 'Courier Prime', monospace;
+}
+
+.bg-yeezy-cream { background: #FAF5EB; }
+.text-yeezy-cream { color: #FAF5EB; }
+.bg-yeezy-charcoal { background: #2B2B2B; }
+.text-yeezy-charcoal { color: #2B2B2B; }
+.bg-yeezy-brown { background: #3A312F; }
+
+.cursor-dot {
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+
+/* Add to your global stylesheet */
+/* body {
+  cursor: none !important;
+} */
+
+.cursor-dot {
+  will-change: transform, opacity;
+}
+
+.cursor-ring {
+  will-change: transform, opacity, border;
+}
+
+.cursor-trail {
+  will-change: transform, opacity;
+}
+
+/* Optional: Add smooth transitions for all elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

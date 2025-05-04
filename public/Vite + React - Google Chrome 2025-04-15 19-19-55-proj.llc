@@ -1,0 +1,10 @@
+{
+  version: 1,
+  mediaFileName: 'Vite + React - Google Chrome 2025-04-15 19-19-55.mp4',
+  cutSegments: [
+    {
+      start: 1.9254472560521414,
+      name: '',
+    },
+  ],
+}
