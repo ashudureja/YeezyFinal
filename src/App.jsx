@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import HeroSection from "./components/Hero";
 
 import { AnimatePresence, motion } from "framer-motion";
-import ProductGrid from "./components/Productgrid";
+import ProductGrid from "./components/ProductGrid";
 import { useCart } from "./CartContext/ContextHook";
 import CartProvider from "./CartContext/Context";
 import AudioPlayer from "./components/AudioPlayer";
