@@ -1,13 +1,8 @@
 @import "tailwindcss";
 
-
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 
-@keyframes pulse-slow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
+
 
 .animate-pulse-slow {
   animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -45,6 +40,11 @@ body {
       background-color: white;
       z-index: 1;
   }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 @keyframes text-reveal-clip {

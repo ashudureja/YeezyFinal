@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HeroSection from "./components/Hero";
-import CustomCursor from "./components/Cursorfollower";
+
 import { AnimatePresence, motion } from "framer-motion";
 import ProductGrid from "./components/Productgrid";
 import { useCart } from "./CartContext/ContextHook";
